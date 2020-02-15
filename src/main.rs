@@ -1,29 +1,18 @@
 rltk::add_wasm_support!();
+
+mod components;
+
+use components::{Position, Renderable, Player};
 use rltk::{Rltk, GameState, Console, RGB, VirtualKeyCode};
 use specs::prelude::*;
 use std::cmp::{max, min};
+
 #[macro_use]
 extern crate specs_derive;
 
 struct State {
     ecs: World
 }
-
-#[derive(Component)]
-struct Position {
-    x: i32,
-    y: i32,
-}
-
-#[derive(Component)]
-struct Renderable {
-    glyph: u8,
-    fg: RGB,
-    bg: RGB,
-}
-
-#[derive(Component, Debug)]
-struct Player{}
 
 #[derive(PartialEq, Copy, Clone)]
 enum TileType {
