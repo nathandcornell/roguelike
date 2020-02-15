@@ -1,5 +1,5 @@
 [package]
-name = "hellorust"
+name = "roguelike"
 version = "0.1.0"
 authors = ["Nate Cornell <nathandcornell@gmail.com>"]
 edition = "2018"
