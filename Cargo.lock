@@ -568,15 +568,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hellorust"
-version = "0.1.0"
-dependencies = [
- "rltk",
- "specs",
- "specs-derive",
-]
-
-[[package]]
 name = "hermit-abi"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1191,6 +1182,15 @@ dependencies = [
  "wasm-bindgen",
  "wasm-timer",
  "web-sys",
+]
+
+[[package]]
+name = "roguelike"
+version = "0.1.0"
+dependencies = [
+ "rltk",
+ "specs",
+ "specs-derive",
 ]
 
 [[package]]

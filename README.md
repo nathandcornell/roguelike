@@ -6,7 +6,7 @@ A Rogue-like game I'm creating while following along this [cool tutorial](http:/
 - Make sure you have Rust installed: 
   `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 - Install dependencies:
-  `cargo update`
+  `cargo install`
 - Run!
   `cargo run`
 
