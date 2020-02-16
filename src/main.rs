@@ -1,12 +1,15 @@
 rltk::add_wasm_support!();
 
 mod components;
-mod player;
 mod map;
+mod player;
+mod rect;
+
+pub use map::{xy_idx, TileType};
+pub use rect::Rect;
 
 use components::{Position, Renderable, Player};
-use map::{draw_map, new_map};
-pub use map::{xy_idx, TileType};
+use map::{draw_map, new_map_with_rooms};
 use player::player_input;
 use rltk::{Rltk, GameState, Console, RGB};
 use specs::prelude::*;
@@ -53,7 +56,7 @@ fn main() {
     gs.ecs.register::<Renderable>();
     gs.ecs.register::<Player>();
 
-    gs.ecs.insert(new_map());
+    gs.ecs.insert(new_map_with_rooms());
 
     gs.ecs
         .create_entity()
